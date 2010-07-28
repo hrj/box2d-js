@@ -1,6 +1,7 @@
 ## Demo
 
-Coming soon
+View the demo [here][2]
+  [2] http://lavadip.com/box2d_demo/index.html 
 
 ## About this fork
 
