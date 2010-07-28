@@ -1,0 +1,36 @@
+body {
+  background:#aaa;
+}
+
+#canvas {
+	padding:0; 
+	/*background-color:#333;*/
+  background:url('../images/yarada.jpg');
+	margin:0 auto; 
+  cursor:crosshair;
+}
+
+#CONTAINER { 
+	margin:0 auto; 
+  text-align:center;
+}
+
+.key {
+border-bottom:1px solid #555;
+}
+
+.ball {
+fill:#edd;
+}
+
+.ballHovering {
+fill:#f99;
+}
+
+.poly {
+fill:#afa;
+}
+
+.polyHovering{
+fill:#5f5;
+}
