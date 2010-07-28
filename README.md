@@ -16,7 +16,7 @@ This fork has the following changes over the original:
 
 ## About this library
 
-The original box2d-js library is hosted on sourceforge.
+The original box2d-js library is hosted on [sourceforge][1].
 
   [1]: http://box2d-js.sourceforge.net/        "Box2D JS"
 
