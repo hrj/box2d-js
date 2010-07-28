@@ -126,42 +126,43 @@ jQuery(window).load(function() {
 
   // the first call initialises the svg
   // the second call fetches the handle
-	canvasElm.svg();
-	ctx = canvasElm.svg('get');
+	canvasElm.svg({'onLoad':function() {
+    ctx = canvasElm.svg('get');
 
-  // ctx = {'svg':svgContext, 'buffers' : []};
-  // initBuffers(svgContext);
-
-  function clickPoint(event) {
-    return {
-      x: event.pageX || (event.clientX +
-        (document.documentElement.scrollLeft || document.body.scrollLeft)),
-      y: event.pageY || (event.clientY +
-        (document.documentElement.scrollTop || document.body.scrollTop))
-    };
-  };
-
-	jQuery('#canvas').click(function(e) {
-    var position = clickPoint(e);
-		if (Math.random() < 0.5) 
-			demos.top.createBall(world, position.x - canvasLeft, position.y - canvasTop);
-		else 
-			createBox(world, position.x - canvasLeft, position.y - canvasTop, 10, 10, false);
-
-    e.stopPropagation();
-    return false;
-	}).dblclick(function(e) {e.stopPropagation();});
-
-	jQuery(window).keypress(function(e) {
-    if (e.altKey || e.ctrlKey) {
-      return
-    }
-    missedFrames = 11;
-    ctx.clear();
+    // ctx = {'svg':svgContext, 'buffers' : []};
     // initBuffers(svgContext);
-		setupPrevWorld();
-		return false;
-	});
 
-	step();
+    function clickPoint(event) {
+      return {
+        x: event.pageX || (event.clientX +
+          (document.documentElement.scrollLeft || document.body.scrollLeft)),
+        y: event.pageY || (event.clientY +
+          (document.documentElement.scrollTop || document.body.scrollTop))
+      };
+    };
+
+    jQuery('#canvas').click(function(e) {
+      var position = clickPoint(e);
+      if (Math.random() < 0.5) 
+        demos.top.createBall(world, position.x - canvasLeft, position.y - canvasTop);
+      else 
+        createBox(world, position.x - canvasLeft, position.y - canvasTop, 10, 10, false);
+
+      e.stopPropagation();
+      return false;
+    }).dblclick(function(e) {e.stopPropagation();});
+
+    jQuery(window).keypress(function(e) {
+      if (e.altKey || e.ctrlKey) {
+        return
+      }
+      missedFrames = 11;
+      ctx.clear();
+      // initBuffers(svgContext);
+      setupPrevWorld();
+      return false;
+    });
+
+    step();
+  }});
 });
