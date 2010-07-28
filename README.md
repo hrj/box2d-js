@@ -2,17 +2,33 @@
 
 Coming soon
 
-## New features in this fork
+## About this fork
 
-  * Spring Joint
-  * Simple optimisations to core library, using for loops.
+This fork has the following changes over the original:
+
+### New features
+  * Spring Joint (simple version, suitable for simulation of soft bodies)
+
+### Code Optimisations
   * Removed dependency on prototype.js
-  * Tried to remove instantiations of b2Vec2
+  * Simple optimisations to core library, using for loops.
+  * Tried to avoid frequent instantiations of b2Vec2
+
+## About this library
+
+The original box2d-js library is hosted on sourceforge.
+
+  [1]: http://box2d-js.sourceforge.net/        "Box2D JS"
+
+It seems to be currently unmaintained and uses the HTML5 Canvas element for display.
+
 
 ## Demo features
 
-  * Using SVG animation
+  * Use of SVGs instead of Canvas
      * Using jquery and jquery.svg
      * only create a shape for the first time, then use transformations
      * if static or sleeping then don't redraw
-     * rate throttling of frame rates
+
+  * throttling of step size and inter-frame delays, to achieve a target FPS.
+  * a new demo scene called `drop` to show off spring-joints.
