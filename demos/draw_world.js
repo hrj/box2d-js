@@ -141,7 +141,7 @@ function drawShape(shape, context, parentBody, currBuffer, buffers) {
         }
         pathStr += 'L'+xy[0]+' '+xy[1]+' ';
         shape.sprite = context.group();
-        var pathObj = context.path(shape.sprite, pathStr, {stroke:'#696', class:'poly'});
+        var pathObj = context.path(shape.sprite, pathStr, {stroke:'#696', 'class':'poly'});
         angle *= 180/Math.PI;     // convert to degrees from radians
         context.change(shape.sprite, {'transform':'rotate('+angle+'),translate('+pos.x+','+pos.y+')'});
         jQuery(pathObj).hover(setPolyHoverIn, setPolyHoverOut);
