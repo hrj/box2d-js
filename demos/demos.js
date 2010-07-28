@@ -126,8 +126,14 @@ jQuery(window).load(function() {
 
   // the first call initialises the svg
   // the second call fetches the handle
+  if (jQuery.browser.msie) {
+   jQuery('#message').html('<br/>If this message doesn\'t go off, your browser (Internet explorer) doesn\'t support SVG.<br/>Try installing the <a href="http://www.ieaddons.com/en/details/Time_Savers/Adobe_SVG_Viewer/">Adobe SVG Viewer</a>'); 
+  }
 	canvasElm.svg({'onLoad':function() {
     ctx = canvasElm.svg('get');
+    if (jQuery.browser.msie) {
+     jQuery('#message').empty();
+    }
 
     // ctx = {'svg':svgContext, 'buffers' : []};
     // initBuffers(svgContext);
