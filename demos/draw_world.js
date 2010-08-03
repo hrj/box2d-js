@@ -1,4 +1,5 @@
 function drawWorld(world, context) {
+  context.root().suspendRedraw(10000);
 	for (var j = world.m_jointList; j; j = j.m_next) {
 		drawJoint(j, context);
 	}
@@ -7,6 +8,7 @@ function drawWorld(world, context) {
 			drawShape(s, context, b);
 		}
 	}
+  context.root().unsuspendRedrawAll();
 }
 
 var uniqueJointId = 0;

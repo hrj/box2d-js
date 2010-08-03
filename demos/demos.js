@@ -87,7 +87,7 @@ function step() {
   delayAvg += delay;
   lastFrameTime = currTime;
   
-  setTimeout('step()', (delay > 0) ? delay : 0);
+  setTimeout(step, (delay > 0) ? delay : 0);
 }
 
 /*
