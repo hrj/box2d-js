@@ -2,7 +2,7 @@
 
 View the demo [here][2].
 
-  [2]: http://lavadip.com/box2d_demo/index.html 
+  [2]: http://lavadip.com/experiments/box2d_demo/
 
 ## About this fork
 
