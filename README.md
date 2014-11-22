@@ -1,31 +1,22 @@
-## Demo
+![Screenshot](http://lavadip.com/experiments/box2d_thumb.png)
 
-View the demo [here][2].
-
-  [2]: http://lavadip.com/experiments/box2d_demo/
+## [Demo](http://lavadip.com/experiments/box2d_demo/)
 
 ## About this fork
 
+The original box2d-js library is hosted on [sourceforge](http://box2d-js.sourceforge.net/). It seems to be currently unmaintained and uses the HTML5 Canvas element for display.
+
 This fork has the following changes over the original:
 
-### New features
+#### New features
   * Spring Joint (simple version, suitable for simulation of soft bodies)
 
-### Code Optimisations
+#### Code Optimisations
   * Removed dependency on prototype.js
-  * Simple optimisations to core library, using for loops.
-  * Tried to avoid frequent instantiations of b2Vec2
+  * Simple optimisations to core library
+  * Avoid frequent instantiations of b2Vec2
 
-## About this library
-
-The original box2d-js library is hosted on [sourceforge][1].
-
-  [1]: http://box2d-js.sourceforge.net/        "Box2D JS"
-
-It seems to be currently unmaintained and uses the HTML5 Canvas element for display.
-
-
-## Demo features
+## Features in the demo
 
   * Use of SVGs instead of Canvas
      * Using jquery and jquery.svg
